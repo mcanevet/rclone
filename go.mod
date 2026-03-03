@@ -14,6 +14,9 @@ require (
 	github.com/FilenCloudDienste/filen-sdk-go v0.0.37
 	github.com/Files-com/files-sdk-go/v3 v3.3.40
 	github.com/Max-Sum/base32768 v0.0.0-20230304063302-18e6ce5945fd
+	github.com/ProtonMail/bcrypt v0.0.0-20211005172633-e235017c1baf
+	github.com/ProtonMail/go-srp v0.0.7
+	github.com/ProtonMail/gopenpgp/v2 v2.9.0
 	github.com/a1ex3/zstd-seekable-format-go/pkg v0.10.0
 	github.com/a8m/tree v0.0.0-20240104212747-2c8764a5f17e
 	github.com/aalpar/deheap v1.0.0
@@ -45,6 +48,7 @@ require (
 	github.com/golang-jwt/jwt/v5 v5.3.1
 	github.com/google/uuid v1.6.0
 	github.com/hanwen/go-fuse/v2 v2.9.0
+	github.com/hashicorp/golang-lru/v2 v2.0.7
 	github.com/internxt/rclone-adapter v0.0.0-20260220172730-613f4cc8b8fd
 	github.com/jcmturner/gokrb5/v8 v8.4.4
 	github.com/jlaffaye/ftp v0.2.1-0.20240918233326-1b970516f5d3
@@ -70,8 +74,6 @@ require (
 	github.com/prometheus/client_golang v1.23.2
 	github.com/putdotio/go-putio/putio v0.0.0-20200123120452-16d982cac2b8
 	github.com/quasilyte/go-ruleguard/dsl v0.3.23
-	github.com/rclone/Proton-API-Bridge v1.0.1-0.20260127174007-77f974840d11
-	github.com/rclone/go-proton-api v1.0.1-0.20260127173028-eb465cac3b18
 	github.com/rclone/gofakes3 v0.0.4
 	github.com/rfjakob/eme v1.2.0
 	github.com/rivo/uniseg v0.4.7
@@ -113,18 +115,12 @@ require (
 	cloud.google.com/go/compute/metadata v0.9.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/internal v1.11.2 // indirect
 	github.com/AzureAD/microsoft-authentication-library-for-go v1.6.0 // indirect
-	github.com/ProtonMail/bcrypt v0.0.0-20211005172633-e235017c1baf // indirect
-	github.com/ProtonMail/gluon v0.17.1-0.20230724134000-308be39be96e // indirect
 	github.com/ProtonMail/go-mime v0.0.0-20230322103455-7d82a3887f2f // indirect
-	github.com/ProtonMail/go-srp v0.0.7 // indirect
-	github.com/ProtonMail/gopenpgp/v2 v2.9.0 // indirect
-	github.com/PuerkitoBio/goquery v1.11.0 // indirect
 	github.com/STARRY-S/zip v0.2.3 // indirect
 	github.com/akavel/rsrc v0.10.2 // indirect
 	github.com/anacrolix/generics v0.2.0 // indirect
 	github.com/anchore/go-lzo v0.1.0 // indirect
 	github.com/andybalholm/brotli v1.2.0 // indirect
-	github.com/andybalholm/cascadia v1.3.3 // indirect
 	github.com/appscode/go-querystring v0.0.0-20170504095604-0126cfb3f1dc // indirect
 	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.7.4 // indirect
 	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.18.17 // indirect
@@ -145,7 +141,6 @@ require (
 	github.com/bodgit/sevenzip v1.6.1 // indirect
 	github.com/bodgit/windows v1.0.1 // indirect
 	github.com/boombuler/barcode v1.1.0 // indirect
-	github.com/bradenaw/juniper v0.15.3 // indirect
 	github.com/bradfitz/iter v0.0.0-20191230175014-e8f45d346db8 // indirect
 	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/calebcase/tmpfile v1.0.3 // indirect
@@ -162,8 +157,6 @@ require (
 	github.com/dsnet/compress v0.0.2-0.20230904184137-39efe44ab707 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/ebitengine/purego v0.9.1 // indirect
-	github.com/emersion/go-message v0.18.2 // indirect
-	github.com/emersion/go-vcard v0.0.0-20241024213814-c9703dde27ff // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/flynn/noise v1.1.0 // indirect
 	github.com/gdamore/encoding v1.0.1 // indirect
@@ -177,7 +170,6 @@ require (
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.30.1 // indirect
-	github.com/go-resty/resty/v2 v2.17.2 // indirect
 	github.com/go-viper/mapstructure/v2 v2.5.0 // indirect
 	github.com/gofrs/flock v0.13.0 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
@@ -191,7 +183,6 @@ require (
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-retryablehttp v0.7.8 // indirect
 	github.com/hashicorp/go-uuid v1.0.3 // indirect
-	github.com/hashicorp/golang-lru/v2 v2.0.7 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jcmturner/aescts/v2 v2.0.0 // indirect
 	github.com/jcmturner/dnsutils/v2 v2.0.0 // indirect
@@ -229,7 +220,6 @@ require (
 	github.com/prometheus/common v0.67.5 // indirect
 	github.com/prometheus/procfs v0.19.2 // indirect
 	github.com/rasky/go-xdr v0.0.0-20170124162913-1a41d1a06c93 // indirect
-	github.com/relvacode/iso8601 v1.7.0 // indirect
 	github.com/rs/xid v1.6.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/ryszard/goskiplist v0.0.0-20150312221310-2dfbae5fcf46 // indirect
